@@ -8,7 +8,7 @@
 						<div class="col-12">
 				  		<!-- form start -->
 				  		<form id="F__ID">
-					  		<h3>Aused 30 mins</h3>
+							<h3 id=title__ID></h3>
 							<div id="participant_div__ID">
 								<div class="form-group">
 									<fieldset class="subquestions">
@@ -56,6 +56,7 @@
 			var load2=m.load;
 			m.load=function(){
 				load2();
+				$('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
 				var fs=$vm.dyn_fields.split(',');
 				var txt="";
 				var ic=0;
