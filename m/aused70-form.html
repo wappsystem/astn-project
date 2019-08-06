@@ -8,33 +8,18 @@
 						<div class="col-12">
 				  		<!-- form start -->
 				  		<form id="F__ID">
-					  		<h3>Participant</h3>
-							<div class="form-group">
-								<fieldset class="subquestions">
-									<label><span>ASTN ID</span>
-										<input type=text class=form-control id=record__ID readonly >
-									</label>
-								</fieldset>
-							</div>
-							<div class="form-group">
-								<fieldset class="subquestions">
-									<label >
-										<span>Participant ID <i>(For synchronizing import into wappsystem's research projects.)</i><</span>
-										<input type=text class=form-control name=Participant_ID>
+					  		<h3>Aused 30 mins</h3>
+							<div id="participant_div__ID">
+								<div class="form-group">
+									<fieldset class="subquestions">
+									<label><span class="">Participant</span>
+										<input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
 									</label><br>
-									<label >
-										<span>Local ID</span>
-										<input type=text class=form-control name=Local_ID>
-									</label><br>
-									<label >
-										<span>Initials</span>
-										<input type=text class=form-control name=Initials>
+									<label><span class="">Participant ID</span>
+										<input type=text name="Participant_uid" class=form-control readonly />
 									</label>
-									<label >
-										<span>Version Number</span>
-										<input type=text class=form-control name=Version_No>
-									</label>
-								</fieldset>
+									</fieldset>
+								</div>
 							</div>
 							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
 							<hr>
@@ -62,8 +47,11 @@
 		function F__ID(){
 			//-------------------------------------
 			VmInclude:'__COMPONENT__/f/form.01.js'
-			VmInclude:__CURRENT_PATH__/shared-task-aused-form.js
+			VmInclude:__CURRENT_PATH__/shared-form.js
 			//-------------------------------------
+			var extime=0;
+            var extruck=0;
+            var nopart=14;
 			//-------------------------------------
 			var load2=m.load;
 			m.load=function(){
@@ -88,9 +76,9 @@
 					txt+='</div>\r\n';
 				}
 				$('#dynamic_part__ID').html(txt);
-				if(m.input.record!=undefined){
-					$('#record__ID').val(m.input.record.UID)
-				}
+//				if(m.input.record!=undefined){
+//					$('#record__ID').val(m.input.record.UID)
+//				}
 				if(m.input.readonly!=undefined) $('#submit__ID').hide();
 				//render_file_field_v2(m.input.record,'__ID',$('#File_Name__ID'));
 				m.set_file_link("File_Name");
@@ -103,7 +91,6 @@
 			})
 			//-------------------------------------
 			m.before_submit=function(data,index){
-				index.I2=$vm.astn_current_project_record.UID;
 			}
 			//-------------------------------------
 			var file_process=function(file){
@@ -217,13 +204,6 @@
 							pedalArr.push(dh.getFloat64(startData+29+38*i));
 							flagArr.push(dh.getUint8(startData+37+38*i));
 						}
-						//console.log($vm.astn_current_project_record)
-						var extime=$vm.astn_current_project_record.Data.exclude_drive;
-						//console.log(extime)
-						var extruck=$vm.astn_current_project_record.Data.exclude_reaction_time;
-						//console.log(extruck)
-						var nopart=$vm.astn_current_project_record.Data.partition;
-						//console.log(nopart)
 						var input_parameters = [parseInt(extime), parseInt(nopart),timestamps];
 						var partitions=get_partitions(input_parameters)
 						var startpos=0;

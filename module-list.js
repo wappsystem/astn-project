@@ -74,7 +74,13 @@
         "mva-astn-form": { url: "$H/m/mva-astn-form.html", Table: "astnproject-mva-astn-20002421", task_name:"Motor Vehicle Accidents" },
         "wa-astn-data": { url: "$H/m/wa-astn-data.html", Table: "astnproject-wa-astn-20002422", form_module: "wa-astn-form", task_name:"Workplace Accidents" },
         "wa-astn-form": { url: "$H/m/wa-astn-form.html", Table: "astnproject-wa-astn-20002422", task_name:"Workplace Accidents" },
-        "thank-you-astn-form": { url: "$H/m/thank-you-astn-form.html", Table: "astnproject-thank-you-astn", task_name:"Thank You" }
+        "thank-you-astn-form": { url: "$H/m/thank-you-astn-form.html", Table: "astnproject-thank-you-astn", task_name:"Thank You" },
+        "aused30-data": { url: "$H/m/aused30-data.html", Table: "astnproject-aused30", form_module: "aused30-form", task_name:"Aused 30 mins" },
+        "aused30-form": { url: "$H/m/aused30-form.html", Table: "astnproject-aused30", task_name:"Aused 30 mins" },
+        "aused70-data": { url: "$H/m/aused70-data.html", Table: "astnproject-aused70", form_module: "aused70-form", task_name:"Aused 70 mins" },
+        "aused70-form": { url: "$H/m/aused70-form.html", Table: "astnproject-aused70", task_name:"Aused 70 mins" },
+        "aused90-data": { url: "$H/m/aused90-data.html", Table: "astnproject-aused90", form_module: "aused90-form", task_name:"Aused 90 mins" },
+        "aused90-form": { url: "$H/m/aused90-form.html", Table: "astnproject-aused90", task_name:"Aused 90 mins" },
 
     }
     for(p in modules){
