@@ -75,12 +75,14 @@
         "wa-astn-data": { url: "$H/m/wa-astn-data.html", Table: "astnproject-wa-astn-20002422", form_module: "wa-astn-form", task_name:"Workplace Accidents" },
         "wa-astn-form": { url: "$H/m/wa-astn-form.html", Table: "astnproject-wa-astn-20002422", task_name:"Workplace Accidents" },
         "thank-you-astn-form": { url: "$H/m/thank-you-astn-form.html", Table: "astnproject-thank-you-astn", task_name:"Thank You" },
-        "aused-30-data": { url: "$H/m/aused-30-data.html", Table: "astnproject-aused-30", form_module: "aused-30-form", task_name:"Aused 30 mins" },
-        "aused-30-form": { url: "$H/m/aused-30-form.html", Table: "astnproject-aused-30", task_name:"Aused 30 mins" },
-        "aused-70-data": { url: "$H/m/aused-70-data.html", Table: "astnproject-aused-70", form_module: "aused-70-form", task_name:"Aused 70 mins" },
-        "aused-70-form": { url: "$H/m/aused-70-form.html", Table: "astnproject-aused-70", task_name:"Aused 70 mins" },
-        "aused-90-data": { url: "$H/m/aused-90-data.html", Table: "astnproject-aused-90", form_module: "aused-90-form", task_name:"Aused 90 mins" },
-        "aused-90-form": { url: "$H/m/aused-90-form.html", Table: "astnproject-aused-90", task_name:"Aused 90 mins" },
+        "aused-30-data": { url: "$H/m/aused30-data.html", Table: "astnproject-aused-30", form_module: "aused-30-form", task_name:"Aused 30 mins" },
+        "aused-30-form": { url: "$H/m/aused30-form.html", Table: "astnproject-aused-30", task_name:"Aused 30 mins" },
+        "aused-60-data": { url: "$H/m/aused60-data.html", Table: "astnproject-aused-60", form_module: "aused-60-form", task_name:"Aused 60 mins" },
+        "aused-60-form": { url: "$H/m/aused60-form.html", Table: "astnproject-aused-60", task_name:"Aused 60 mins" },
+        "aused-70-data": { url: "$H/m/aused70-data.html", Table: "astnproject-aused-70", form_module: "aused-70-form", task_name:"Aused 70 mins" },
+        "aused-70-form": { url: "$H/m/aused70-form.html", Table: "astnproject-aused-70", task_name:"Aused 70 mins" },
+        "aused-90-data": { url: "$H/m/aused90-data.html", Table: "astnproject-aused-90", form_module: "aused-90-form", task_name:"Aused 90 mins" },
+        "aused-90-form": { url: "$H/m/aused90-form.html", Table: "astnproject-aused-90", task_name:"Aused 90 mins" },
 
     }
     for(p in modules){
